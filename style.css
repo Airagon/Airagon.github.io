@@ -1,0 +1,268 @@
+:root {
+	--anim-sprite-height: -1382.4px;
+}
+  
+
+body{
+	margin: 0;
+	cursor: url('assets/cursor.png'), auto;
+	background-color: black;
+}
+
+#arena{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	
+	background: url('assets/bg.png') 0% 0% no-repeat padding-box;
+	/* background-color: #939393; */
+	background-size: cover;
+	background-size: 100% 100%;
+	background-position-x: center;
+	background-position-y: center;
+}
+
+.clickable{
+	position: absolute;
+	
+	width: 3%;
+	height: 3%;
+
+	top: 32%;
+	left: 32%;
+
+	border-radius: 100%;
+
+	background-color: rgb(56, 132, 255);
+}
+
+#player{
+	position: absolute;
+	width: 3%;
+	height: 3%;
+	/* background-color: black; */
+}
+
+#spritePlayer{
+	position: absolute;
+	
+	top: -25%;
+	left: -25%;
+
+	width: 150%;
+	height: 150%;
+
+	background-size: cover;
+}
+
+.idle0{
+	background: url('assets/Sprites/idle/0.png') 0% 0% no-repeat padding-box;
+}
+.idle1{
+	background: url('assets/Sprites/idle/1.png') 0% 0% no-repeat padding-box;
+}
+.idle2{
+	background: url('assets/Sprites/idle/2.png') 0% 0% no-repeat padding-box;
+}
+.idle3{
+	background: url('assets/Sprites/idle/3.png') 0% 0% no-repeat padding-box;
+}
+.idle4{
+	background: url('assets/Sprites/idle/4.png') 0% 0% no-repeat padding-box;
+}
+.idle5{
+	background: url('assets/Sprites/idle/5.png') 0% 0% no-repeat padding-box;
+}
+.idle6{
+	background: url('assets/Sprites/idle/6.png') 0% 0% no-repeat padding-box;
+}
+.idle7{
+	background: url('assets/Sprites/idle/7.png') 0% 0% no-repeat padding-box;
+}
+
+.running0{
+	background: url('assets/Sprites/running/0.png') 0% 0% no-repeat padding-box;
+	animation: sprite 0.7s steps(12) infinite;
+}
+.running1{
+	background: url('assets/Sprites/running/1.png') 0% 0% no-repeat padding-box;
+	animation: sprite 0.7s steps(12) infinite;
+}
+.running2{
+	background: url('assets/Sprites/running/2.png') 0% 0% no-repeat padding-box;
+	animation: sprite 0.7s steps(12) infinite;
+}
+.running3{
+	background: url('assets/Sprites/running/3.png') 0% 0% no-repeat padding-box;
+	animation: sprite 0.7s steps(12) infinite;
+}
+.running4{
+	background: url('assets/Sprites/running/4.png') 0% 0% no-repeat padding-box;
+	animation: sprite 0.7s steps(12) infinite;
+}
+.running5{
+	background: url('assets/Sprites/running/5.png') 0% 0% no-repeat padding-box;
+	animation: sprite 0.7s steps(12) infinite;
+}
+.running6{
+	background: url('assets/Sprites/running/6.png') 0% 0% no-repeat padding-box;
+	animation: sprite 0.7s steps(12) infinite;
+}
+.running7{
+	background: url('assets/Sprites/running/7.png') 0% 0% no-repeat padding-box;
+	animation: sprite 0.7s steps(12) infinite;
+}
+
+@keyframes sprite {
+	100% { background-position: 0 var(--anim-sprite-height); }
+}
+
+.enemy{
+	position: absolute;
+	width: 5%;
+	height: 5%;
+}
+
+.spriteEnemy{
+	position: absolute;
+	
+	width: 100%;
+	height: 100%;
+	
+	background: url('assets/spikeBall.png') 0% 0% no-repeat padding-box;
+	background-size: cover;
+	background-size: 100% 100%;
+	background-position-x: center;
+	background-position-y: center;
+}
+
+.attackCollider{
+	position: absolute;
+	width: 150%;
+	height: 150%;
+
+	top: -25%;
+	left: -25%;
+
+	border-radius: 100%;
+}
+
+
+.health{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+
+	text-align: center;
+	font: normal normal 600 24px/32px SegoeUISemiBold;
+	font-size: 1.35vw;
+	line-height: 2.96vh;
+	letter-spacing: 0px;
+	color: #ffffff;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+
+/* Style for the animation element */
+.clickAnimation {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+	background: url('assets/ClickSprite.png') 0% 0% no-repeat padding-box;
+	background-size: cover;
+	background-size: 100% 100%;
+	background-position-x: center;
+	background-position-y: center;
+
+    border-radius: 50%;
+    pointer-events: none; /* Ensure clicks pass through the element */
+    animation: fadeOut 0.6s forwards; /* Animation to fade out */
+
+	z-index: 2;
+}
+
+.targetAnimation {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+	background: url('assets/ClickSprite.png') 0% 0% no-repeat padding-box;
+	background-size: cover;
+	background-size: 100% 100%;
+	background-position-x: center;
+	background-position-y: center;
+
+    pointer-events: none; /* Ensure clicks pass through the element */
+    animation: fadeOut 0.6s forwards; /* Animation to fade out */
+
+	z-index: 2;
+}
+
+.targetAnimationInRange {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+	background: url('assets/ClickSprite.png') 0% 0% no-repeat padding-box;
+	background-size: cover;
+	background-size: 100% 100%;
+	background-position-x: center;
+	background-position-y: center;
+
+	pointer-events: none; /* Ensure clicks pass through the element */
+    animation: fadeOut 0.6s forwards; /* Animation to fade out */
+
+	z-index: 2;
+}
+
+/* Keyframes for the fade-out animation */
+@keyframes fadeOut {
+    0% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+#projectile{
+	position: absolute;
+	width: 20px;
+	height: 10px;
+	opacity: 0;
+	background-color: #ffffff;
+}
+
+
+#terrain1{
+	position: absolute;
+	width: 240px;
+	height: 600px;
+
+	top: 240px;
+	left: 240px;
+
+	background-color: rgb(28, 12, 86);
+}
+
+#terrain2{
+	position: absolute;
+	width: 240px;
+	height: 600px;
+
+	top: 240px;
+	right: 240px;
+
+	background-color: rgb(28, 12, 86);
+}
